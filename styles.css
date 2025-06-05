@@ -23,10 +23,6 @@
     border: 0   !important;
 }
 
-.tab-switch i.visited, i.active{
-  color: blue;
-}
-
 .nav-link.active {
     color: blue !important;
 }
