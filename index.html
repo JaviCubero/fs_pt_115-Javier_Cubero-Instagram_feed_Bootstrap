@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Instagram with Bootstrap</title>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Logo y nombre Instagram -->
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+
+            <!-- Botón modal -->
+            <button type="button" class="btn btn-success ms-auto me-2" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Create a new post
+            </button>
+
+            <!-- Contenido modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Caption:</label>
+                                <textarea class="form-control" id="message-text"
+                                    placeholder="Add the caption of your post here"></textarea>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-camera modal-icons"></i>
+                                <i class="fa-solid fa-location-dot modal-icons"></i>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    data-bs-display="static" aria-expanded="false">
+                    <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" type="button">Profile</a></li>
+                    <li><a class="dropdown-item" type="button">Accesibility</a></li>
+                    <li><a class="dropdown-item" type="button">Privacy and Data</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" type="button" style="color: red">Log out</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!-- Botonera para cambiar de pestaña en el feed (Color de los botones predeterminado style="color: #757575;")-->
+    <nav class="tab-switch">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                    class="fa-solid fa-table-cells"></i></button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </div>
+    </nav>
+
+    <!-- Contenido de ambas pestañas -->
+    <div class="tab-content" id="nav-tabContent">
+
+        <!-- Pestaña 1 -->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+            tabindex="0">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://media.istockphoto.com/id/465377790/es/foto/salto-golden-retriever-cachorro.jpg?s=612x612&w=0&k=20&c=HVymMnER-YmYt4ucnHr-_IMFTkctwJJtjgbNUwUnP9g=">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://media.istockphoto.com/id/2166773378/es/foto/autumn-on-lake-gosau-in-salzkammergut-austria.jpg?b=1&s=612x612&w=0&k=20&c=5CjOhXBC0qPkxRzeCD_JWlBcdSCHt2_cqyxJ-Y_0zk4=">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img src="https://www.clarin.com/img/2023/12/28/k8gOUmfp5_720x0__1.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://fotografias.larazon.es/clipping/cmsimages02/2022/04/19/071BEB78-DC06-48E8-A08C-960F6693DA4E/98.jpg?crop=1200,675,x0,y45&width=1900&height=1069&optimize=low&format=webply">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=1600&height=1024&rnd=133210253587130000">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://cdn.shortpixel.ai/spai/q_lossless+w_1082+to_auto+ret_img/independent-photo.com/wp-content/uploads/2022/02/Yifeng-Ding-scaled.jpeg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2022/07/02/16567890145681.jpg">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://www.seguroparaperros.com/wp-content/uploads/2021/11/cuidado-perros-primavera-1.jpg">
+                    </div>
+                    <div class="col ratio ratio-1x1">
+                        <img
+                            src="https://media.istockphoto.com/id/1920369714/es/foto/la-catedral-de-sevilla-y-la-giralda-durante-un-hermoso-d%C3%ADa-soleado-en-sevilla.jpg?s=612x612&w=0&k=20&c=4vO46ABV3Vmi9CGCRNDP5uV8yJfVjlzHCkgChwgnNAE=">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pestaña 2 -->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+            <div class="photo-feed">
+                <div class="posts">
+                    <div class="photo-head">
+                        <p id="title">My Crazy dog Spark!</p>
+                        <p id="date">08/26</p>
+                    </div>
+                    <div><img
+                            src="https://media.istockphoto.com/id/465377790/es/foto/salto-golden-retriever-cachorro.jpg?s=612x612&w=0&k=20&c=HVymMnER-YmYt4ucnHr-_IMFTkctwJJtjgbNUwUnP9g="
+                            alt=""></div>
+                    <div class="comment-box">
+                        <p><strong>204 Likes</strong> <br> This is an example of a very good photo that you can post on
+                            Instagram.</p>
+                    </div>
+                </div>
+
+                <div class="posts">
+                    <div class="photo-head">
+                        <p id="title">The greatness of Seville</p>
+                        <p id="date">04/09</p>
+                    </div>
+                    <div><img
+                            src="https://fotografias.larazon.es/clipping/cmsimages02/2022/04/19/071BEB78-DC06-48E8-A08C-960F6693DA4E/98.jpg?crop=1200,675,x0,y45&width=1900&height=1069&optimize=low&format=webply"
+                            alt=""></div>
+                    <div class="comment-box">
+                        <p><strong>26985 Likes</strong> <br> This is an example of a very good photo that you can post
+                            on Instagram.</p>
+                    </div>
+                </div>
+
+                <div class="posts">
+                    <div class="photo-head">
+                        <p id="title">The best player in the world</p>
+                        <p id="date">06/10</p>
+                    </div>
+                    <div><img
+                            src="https://fifpro.org/media/fhmfhvkx/messi-world-cup.jpg?rxy=0.48356841796117644,0.31512414378031967&width=1600&height=1024&rnd=133210253587130000"
+                            alt=""></div>
+                    <div class="comment-box">
+                        <p><strong>468 Likes</strong> <br> This is an example of a very good photo that you can post on
+                            Instagram.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
