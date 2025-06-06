@@ -45,7 +45,7 @@
 
 .posts {
     margin: auto;
-    width: 614px;
+    max-width: 614px;
     margin-bottom: 25px;
     border-radius: 3px;
     background-color: white;
